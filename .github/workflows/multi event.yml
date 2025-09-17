@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  my job 1 :
+  my_job_1 :
     runs-on: ubuntu-latest
     steps: 
       - name: run a command
@@ -15,7 +15,7 @@ jobs:
           echo "Action: $GITHUB_ACTION"
           echo "Actor: $GITHUB_ACTOR"
   
-  my job 2 :
+  my_job_2 :
     runs-on: ubuntu-latest
     steps:
       - name: say my name
