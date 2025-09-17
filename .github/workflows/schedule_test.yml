@@ -1,3 +1,5 @@
+name: schedule testing
+
 on:
   schedule:
     - cron: '*/1 * * * *'
