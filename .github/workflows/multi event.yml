@@ -19,5 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: say my name
-        run: echo "my name is $(whoami)"
+        run: echo "my name is $(whoami)  yes"
+
+
+           
 
