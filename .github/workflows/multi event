@@ -1,0 +1,23 @@
+name: multi event test
+
+on: 
+  issue:
+  pull_request:
+
+jobs:
+  my job 1 :
+    runs-on: ubuntu-latest
+    steps: 
+      - name: run a command
+        run: |
+          echo "REF: $GITHUB_REF"
+          echo "Job ID: $GITHUB_JOB"
+          echo "Action: $GITHUB_ACTION"
+          echo "Actor: $GITHUB_ACTOR"
+  
+  my job 2 :
+    runs-on: ubuntu-latest
+    steps:
+      - name: say my name
+        run: echo "my name is $(whoami)"
+
