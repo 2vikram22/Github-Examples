@@ -10,10 +10,10 @@ jobs:
     steps: 
       - name: run a command
         run: |
-          echo "REF: $GITHUB_REF"
-          echo "Job ID: $GITHUB_JOB"
-          echo "Action: $GITHUB_ACTION"
-          echo "Actor: $GITHUB_ACTOR"
+          echo "REF: {{  github.ref }}"
+          echo "Job ID: {{ github.job }}"
+          echo "Action: {{ github.action }}"
+          echo "Actor: {{ github.actor }}"
   
   my_job_2 :
     runs-on: ubuntu-latest
