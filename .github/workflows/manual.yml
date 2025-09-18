@@ -22,7 +22,7 @@ jobs:
         steps:
             - name: print
               run: |
-                echo "manual trigger by {{ inputs.name }}"
-                cat {{ inputs.file }}
+                echo "manual trigger by ${{ inputs.name }}"
+                cat ${{ inputs.file }}
         
     
