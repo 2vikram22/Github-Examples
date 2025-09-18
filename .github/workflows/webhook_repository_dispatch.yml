@@ -1,0 +1,21 @@
+name: "repoitory_dispathc"
+
+on:
+    repository_dispatch:
+        types:
+            - webhook
+            - web2
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: to print the event
+              run: echo "event is ${{ github.event_name  }}"
+              
+
+
+
+
+

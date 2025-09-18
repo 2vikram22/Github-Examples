@@ -32,5 +32,16 @@ jobs:
                 cd .github/workflows/
                 pwd
                 cat ./"${{ inputs.file }}"
+
+
+# to run from cli  --- gh workflow run manual.yml -f name=vikram -f file=sample.txt
+# via api
+#curl -X POST   -H "Accept: application/vnd.github+json"   -H "Authorization: Bearer $GITHUB_TOKEN"   https://api.github.com/repos/2vikram22/Github-Examples/actions/workflows/manual.yml/dispatches   -d '{
+#     "ref": "main",
+#     "inputs": {
+#       "name": "vikram",
+#       "file": "sample.txt"
+#     }
+#   }'
         
     
