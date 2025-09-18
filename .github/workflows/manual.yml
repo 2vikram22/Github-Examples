@@ -29,6 +29,8 @@ jobs:
               run: |
                 echo "manual trigger by ${{ inputs.name }}"
                 pwd
+                cd .github/workflows/
+                pwd
                 cat ./"${{ inputs.file }}"
         
     
