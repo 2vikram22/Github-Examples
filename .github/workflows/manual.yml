@@ -23,6 +23,6 @@ jobs:
             - name: print
               run: |
                 echo "manual trigger by ${{ inputs.name }}"
-                cat ${{ inputs.file }}
+                cat ./${{ inputs.file }}
         
     
