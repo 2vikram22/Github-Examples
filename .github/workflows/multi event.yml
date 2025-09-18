@@ -3,7 +3,7 @@ name: multi event test
 on: 
   issues:
   pull_request:
-
+ 
 jobs:
   my_job_1 :
     runs-on: ubuntu-latest

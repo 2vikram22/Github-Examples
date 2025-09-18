@@ -1,0 +1,28 @@
+name: manual trigger testing or with issue
+
+
+on:
+    issues:
+    workflow_dispatch:
+        inputs:
+            name:
+                description: Enter your name
+                type: string
+                required: true
+            file:
+                description: Enter file name
+                type: string
+                required: false
+
+
+
+jobs:
+    my_hjob1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print
+              run: |
+                echo "manual trigger by {{ inputs.name }}"
+                cat {{ inputs.file }}
+        
+    
