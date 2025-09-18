@@ -20,6 +20,11 @@ jobs:
     my_hjob1:
         runs-on: ubuntu-latest
         steps:
+
+            - name: Checkout repo
+              uses: actions/checkout@v4    ## so that repo files are accessible
+
+
             - name: print
               run: |
                 echo "manual trigger by ${{ inputs.name }}"
