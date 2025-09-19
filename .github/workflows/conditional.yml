@@ -1,0 +1,16 @@
+name: conditional checks
+
+
+on: [push]
+
+jobs:
+  job1:
+    if: github.repository == '2vikram22/Github-Examples'  # job level if
+    runs-on: ubuntu-latest
+    steps:
+      - name: print heelo
+        run: echo "hello"
+      
+      - name: step lvel if 
+        if:  github.repository == 'asd'
+        run: echo "hello"
