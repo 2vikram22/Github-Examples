@@ -1,0 +1,18 @@
+#https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+
+name: workflow_commands
+
+on:
+    push:
+
+jobs:
+    jon1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: set a variables
+              run: echo "MY_VAR=vikram" >> $GITHUB_ENV
+            
+            - name: print all
+              run : |
+               echo $GITHUB_ENV
+               echo $MY_VAR
