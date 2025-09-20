@@ -10,7 +10,7 @@ jobs:
           run: echo "hell" 
         
         - name: skeep
-          run: sleep()
+          run: sleep(15)
         
     job2:
         runs-on: ubuntu-latest
