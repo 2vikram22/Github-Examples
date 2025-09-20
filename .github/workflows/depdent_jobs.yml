@@ -1,0 +1,34 @@
+
+on:
+    push:
+
+jobs:
+    job1:
+      runs-on: ubuntu-latest
+      steps:
+        - name: job1 step 1
+          run: echo "hell" 
+        
+        - name: skeep
+          run: sleep()
+        
+    job2:
+        runs-on: ubuntu-latest
+        needs: job1
+        steps:
+            - name: echo
+              run: echo "job2"
+
+    
+    job3:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print
+              run: echo "job2"
+    
+    job4:
+        runs-on: ubuntu-latest
+        needs: [job2,job3]
+        steps:
+            - name: print
+              run: echo "job4"
