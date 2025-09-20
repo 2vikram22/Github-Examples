@@ -1,0 +1,21 @@
+#https://docs.github.com/en/actions/reference/workflows-and-actions/contexts
+
+
+name: github contexts
+
+on:
+    push
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: github_ex
+              run: | 
+                echo $MY_ACTION
+                echo ${MY_ACTOR}
+              env:
+                MY_ACTION: ${{ github.action }}
+                MY_ACTOR: ${{ github.actor }}
+
+
